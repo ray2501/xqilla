@@ -47,8 +47,8 @@ make clean
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/xqilla
-%attr(755,root,root) %{_libdir}/libxqilla.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libxqilla.so.3
+%{_libdir}/libxqilla.so.*.*.*
+%ghost %{_libdir}/libxqilla.so.3
 
 %files devel
 %defattr(644,root,root,755)
