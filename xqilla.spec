@@ -8,6 +8,7 @@ Source0:	http://downloads.sourceforge.net/xqilla/XQilla-%{version}.tar.gz
 URL:		http://xqilla.sourceforge.net/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
+BuildRequires:	gcc-c++
 BuildRequires:	flex
 BuildRequires:	libstdc++-devel
 BuildRequires:	libxerces-c-devel >= 3
