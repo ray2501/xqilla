@@ -1,8 +1,8 @@
 #!/usr/bin/tclsh
 
 set arch "x86_64"
-set base "XQilla-2.3.4"
-set fileurl "https://sourceforge.net/projects/xqilla/files/XQilla-2.3.4.tar.gz"
+set base "XQilla-2.3.3"
+set fileurl "https://sourceforge.net/projects/xqilla/files/XQilla-2.3.3.tar.gz"
 
 set var [list wget $fileurl -O $base.tar.gz]
 exec >@stdout 2>@stderr {*}$var
