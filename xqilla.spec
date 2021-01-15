@@ -4,7 +4,11 @@
 
 Summary:	XQilla - C++ implementation of XQuery and XPath 2.0 based on Xerces-C
 Name:		xqilla
+%if 0%{?sle_version} <= 150200
 Version:	2.3.3
+%else
+Version:	2.3.4
+%endif
 Release:	1
 License:	Apache-2.0
 Group:		Libraries
@@ -15,7 +19,11 @@ BuildRequires:	automake
 BuildRequires:	gcc-c++
 BuildRequires:	flex
 BuildRequires:	libstdc++-devel
+%if 0%{?sle_version} <= 150200
 BuildRequires:	libxerces-c-devel >= 3
+%else
+BuildRequires:	libxerces-c-devel >= 3.2
+%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -53,7 +61,11 @@ make clean
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/xqilla
 %{_libdir}/libxqilla.so.*.*.*
+%if 0%{?sle_version} <= 150200
 %ghost %{_libdir}/libxqilla.so.3
+%else
+%ghost %{_libdir}/libxqilla.so.2
+%endif
 
 %files devel
 %defattr(644,root,root,755)
